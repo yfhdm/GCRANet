@@ -141,10 +141,16 @@ class ToTensorLab(object):
                 tmpImg[:, :, 0] = (image[:, :, 0] - 0.4669) / 0.2437
                 tmpImg[:, :, 1] = (image[:, :, 0] - 0.4669) / 0.2437
                 tmpImg[:, :, 2] = (image[:, :, 0] - 0.4669) / 0.2437
+                # tmpImg[:, :, 0] = (image[:, :, 0] - 0.485) / 0.229
+                # tmpImg[:, :, 1] = (image[:, :, 0] - 0.485) / 0.229
+                # tmpImg[:, :, 2] = (image[:, :, 0] - 0.485) / 0.229
             else:
                 tmpImg[:, :, 0] = (image[:, :, 0] - 0.4669) / 0.2437
                 tmpImg[:, :, 1] = (image[:, :, 1] - 0.4669) / 0.2437
                 tmpImg[:, :, 2] = (image[:, :, 2] - 0.4669) / 0.2437
+                # tmpImg[:, :, 0] = (image[:, :, 0] - 0.485) / 0.229
+                # tmpImg[:, :, 1] = (image[:, :, 1] - 0.456) / 0.224
+                # tmpImg[:, :, 2] = (image[:, :, 2] - 0.406) / 0.225
 
 
         tmpedge = np.zeros(edge.shape)
