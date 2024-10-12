@@ -4,6 +4,7 @@ import numpy as np
 import math
 from torch.utils.data import Dataset
 import cv2
+import random
 
 
 # ==========================dataset load==========================
@@ -165,7 +166,7 @@ class ToTensorLab(object):
         tmpedge = tmpedge.transpose((2, 0, 1))
         return {'image': torch.from_numpy(tmpImg), 'label': torch.from_numpy(tmpLbl),"edge":torch.from_numpy(tmpedge)}
 
-import random
+
 def cv_random_flip(img, label):
     flip_flag = random.randint(0, 1)
 
