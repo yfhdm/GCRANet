@@ -198,7 +198,7 @@ class GCRANet(nn.Module):
         output_side4 = interpolate(self.heads[3](fused_stage4), x.size()[2:])
         output_main = self.heads[4](fused_stage5)
 
-        return output_main, output_side2, output_side3, output_side4,output_side1
+        return output_main, output_side1, output_side2, output_side3, output_side4
 
 
 
