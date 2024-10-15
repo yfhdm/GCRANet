@@ -351,26 +351,5 @@ class PyramidPooling(nn.Module):
         x = self.out(x)
 
         return x
-from torchstat import stat
-if __name__ == '__main__':
-
-    model = GCRANet()
-    from mmcv.cnn import get_model_complexity_info
-
-    # if torch.cuda.is_available():
-    #     net = model.cuda()
-    # flops, params = get_model_complexity_info(net, input_shape=(3, 256, 256),print_per_layer_stat=True)
-    # print(flops)
-    # print(params)
-
-    stat(model, (3, 256, 256))
-
-    # from thop import profile, clever_format
-    #
-    # input = torch.randn(1, 3, 256, 256).cuda()
-    # flops, params = profile(net, inputs=(input,))
-    # flops, params = clever_format([flops, params], "%.4f")
-    # print(flops)
-    # print(params)
 
 
