@@ -45,8 +45,8 @@ def train(model_name, dataset_name):
         epoch_val = 30
         bs = 8
     elif dataset_name == "DAGM":
-        epoch_num = 200
-        epoch_val = 150
+        epoch_num = 270
+        epoch_val = 200
         bs = 8
     elif dataset_name == "Magnetic-tile-defect-datasets":
         epoch_num = 900
