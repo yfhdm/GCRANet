@@ -90,7 +90,7 @@ def train(model_name, dataset_name):
     # ------- 4. define optimizer --------
     print("---define optimizer...")
 
-    optimizer =  optimizer=optim.Adam(net.parameters(), lr=0.00005, betas=(0.9, 0.999), eps=1e-08)
+    optimizer =  optimizer=optim.Adam(net.parameters(), lr=0.0005, betas=(0.9, 0.999), eps=1e-08)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # ------- 5. training process --------
